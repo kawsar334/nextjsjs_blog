@@ -10,7 +10,7 @@ export default async function Navbar() {
     const user = await session?.getUser();
     const { isAuthenticated } = getKindeServerSession();
     const isUserAuthenticated = await isAuthenticated();
-    
+    console.log("heiasd", process.env.KINDE_ISSUER_URL);
     return (
         <nav className="flex flex-wrap items-center justify-between  py-4 sticky top-0 left-0 px-10 bg-blue-500 shadow-md">
             <Link href="/" className="flex items-center">
